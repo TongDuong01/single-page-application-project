@@ -1,12 +1,12 @@
 # ĐỒ ÁN MÔN HỌC: ỨNG DỤNG QUẢN LÝ GHI CHÚ (REACTJS & NODEJS)
 
-**Giảng viên hướng dẫn:** [Tên giảng viên]
-**Nhóm thực hiện:** Nhóm [Số nhóm]
+**Giảng viên hướng dẫn:** Lữ Cao Tiến
+**Nhóm thực hiện:** Nhóm 15
 **Thành viên:**
 
-1. [Họ tên] - [Mã SV] - Vai trò: PM & QA
-2. [Họ tên] - [Mã SV] - Vai trò: Frontend Developer
-3. [Họ tên] - [Mã SV] - Vai trò: Backend Developer
+1. Hoàng Tiến Đạt - 0306341272 - Vai trò: PM & QA
+2. Trần Ngọc Duy - 0306341268 - Vai trò: Frontend Developer
+3. Tống Viết Linh Dương - 0306341270 - Vai trò: Backend Developer
 
 ## 1. Công nghệ sử dụng
 
