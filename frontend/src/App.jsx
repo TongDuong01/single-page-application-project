@@ -13,9 +13,9 @@ function App() {
         <h2>Ghi chú</h2>
 
         <nav>
-          <Link to="/">Trang chủ</Link>
-          <Link to="/settings">Cài đặt</Link>
-          <Link to="/private">Vùng kín</Link>
+          <Link to="/">Trang chủ </Link>
+          <Link to="/settings">Cài đặt </Link>
+          <Link to="/private">Riêng tư</Link>
         </nav>
       </aside>
 
