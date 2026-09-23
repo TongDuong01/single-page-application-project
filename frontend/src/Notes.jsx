@@ -1,7 +1,7 @@
 /**
 * ============================================================================
 * COMPONENT: GIAO DIỆN QUẢN LÝ GHI CHÚ (Notes.jsx)
-* Author: [Điền tên Frontend Dev]
+* Author: [Điền tên Frontend Dev] [Trần Ngọc Duy]
 *
 * [CẢNH BÁO TRÁNH XUNG ĐỘT]:
 * - Vùng 1 & 2 (State & Logic): Chỉ người phụ trách tích hợp API mới được sửa.
