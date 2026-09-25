@@ -50,7 +50,7 @@ function Settings() {
                 </select>
             </div>
             <div style={{ marginTop: '10px' }}>
-                <label>Mật khẩu vùng kín: </label>
+                <label>Mật khẩu Riêng tư: </label>
                 <input type="password" name="password" value={profile.password}
                     onChange={handleChange} />
             </div>

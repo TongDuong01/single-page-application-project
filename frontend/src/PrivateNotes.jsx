@@ -73,11 +73,11 @@ function PrivateNotes() {
     }
     // 3.2. Nếu đã mở khóa -> Render giao diện Note tương tự Sprint 2
     return (
-        <div style={{ padding: '20px', backgroundColor: '#ffebee' }}>
+        <div style={{ padding: '20px',}}>
             <h2 style={{ color: 'red' }}>Khu vực Ghi chú Riêng tư </h2>
             {/* Form nhập liệu */}
             <div style={{
-                border: '1px solid red', padding: '10px', marginBottom: '20px'
+                border: '1px solid green', padding: '10px', marginBottom: '20px'
             }}>
                 <input
                     placeholder="Tiêu đề bí mật" value={formData.title}
@@ -96,7 +96,7 @@ function PrivateNotes() {
             {/* Danh sách */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                 {notes.map(note => (
-                    <div key={note.id} style={{ border: '1px solid red', padding: '15px' }}>
+                    <div key={note.id} style={{ border: '1px solid green', padding: '15px' }}>
                         <h4>{note.title}</h4>
                         <p>{note.content}</p>
                     </div>
