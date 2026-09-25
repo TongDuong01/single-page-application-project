@@ -185,7 +185,7 @@ app.post('/api/private/notes', (req, res) => {
         let notes = JSON.parse(fs.readFileSync(privateNotesFile, 'utf8'));
         const newNote = {
             id: Date.now().toString(),
-            title: req.body.title || "Lưu bút mật",
+            title: req.body.title || "Lưu bí mật",
             content: req.body.content || "",
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString()
@@ -225,5 +225,50 @@ app.delete('/api/private/notes/:id', (req,res) =>{
         res.status(500).json({ message: "Lỗi xóa ghi chú" });
     }
 });
+
+
+
+//Tim kiem 
+// 1.Tìm kiếm ghi chu
+app.get('/api/notes/:topic', (req, res) => {
+    const filePath = getFilePath(req.params.topic);
+    try {
+        if (!fs.existsSync(filePath)) return res.json([]);
+        const data = fs.readFileSync(filePath, 'utf8');
+        let notes = JSON.parse(data);
+        const searchTitle = req.query.title;
+        if(searchTitle){
+            const keyword = searchTitle.trim().toLowerCase();
+            notes = notes.filter(note => {
+                return note.title && note.title.toLowerCase().includes(keyword);
+            });
+        }
+        res.json(notes);
+    } catch (error) {
+        res.status(500).json({ message: "Không tìm thấy ghi chú" });
+    }
+});
+
+// 2.Tìm kiếm ghi chú riêng tư
+app.get('/api/private/notes', (req, res) => {
+    try {
+        if (!fs.existsSync(privateNotesFile)) return res.json([]);
+        const data = fs.readFileSync(privateNotesFile, 'utf8');
+        let privateNotes = JSON.parse(data);
+        const searchTitle = req.query.title;
+        if(searchTitle){
+            const keyword = searchTitle.trim().toLowerCase();
+            privateNotes = privateNotes.filter(privateNote => {
+                return privateNote.title && privateNote.title.toLowerCase().includes(keyword);
+            });
+        }
+        res.json(privateNotes);
+    } catch (error) {
+        res.status(500).json({ message: "Không tìm thấy ghi chú" });
+    }
+});
+
+
+
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Backend chạy tại http://localhost:${PORT}`));
